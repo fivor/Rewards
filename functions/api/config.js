@@ -23,7 +23,8 @@ export async function onRequest(context) {
     highlightTiers: {
       primary: parseInt(env.CONFIG_HIGHLIGHT_PRIMARY, 10) || 100,
       secondary: parseInt(env.CONFIG_HIGHLIGHT_SECONDARY, 10) || 20,
-    }
+    },
+    maxMoney: parseInt(env.CONFIG_MAX_MONEY, 10) || 10000
   };
 
   return new Response(JSON.stringify(config), {

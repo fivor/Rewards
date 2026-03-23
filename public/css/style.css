@@ -92,10 +92,33 @@ body.loaded .main-content {
     margin: auto; /* 修改为 auto 以实现垂直水平居中 */
 }
 
+/* --- 页面元素淡入动画 --- */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* --- 横幅样式 --- */
 .banner {
     text-align: center;
-    /* Removed padding to let the inner box control spacing */
+    animation: fadeInDown 0.6s ease-out;
 }
 
 .banner-box {
@@ -142,6 +165,7 @@ body.loaded .main-content {
     padding: 2rem;
     padding-bottom: 0; /* Adjusted for better spacing */
     background-color: transparent;
+    animation: fadeInDown 0.7s ease-out 0.15s both;
 }
 .qr-code {
     text-align: center;
@@ -273,6 +297,7 @@ tbody tr:not(.highlight):not(.highlight-secondary) td:nth-child(3) {
     text-align: center;
     margin-top: 2rem;
     padding-bottom: 2rem;
+    animation: fadeInUp 0.6s ease-out 0.3s both;
 }
 
 .info-box {
