@@ -187,6 +187,9 @@ thead th {
     color: #555;
     background-color: rgba(250, 250, 250, 0.5);
 }
+tbody tr {
+    background-color: rgba(248, 250, 252, 0.5);
+}
 tbody tr:last-child td {
     border-bottom: none;
 }
